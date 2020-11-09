@@ -72,7 +72,7 @@ namespace ClaimsMicroservice.Repository
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                 using (HttpClient client = new HttpClient(clientHandler))
                 {
-                    client.BaseAddress = new Uri("http://20.42.33.196/api");
+                    client.BaseAddress = new Uri("http://20.42.33.196/api/");
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response3 = new HttpResponseMessage();
                     response3 = client.GetAsync("Policy/GetChainOfProviders/" + policyID).Result;
@@ -104,7 +104,7 @@ namespace ClaimsMicroservice.Repository
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                 using (HttpClient client = new HttpClient(clientHandler))
                 {
-                    client.BaseAddress = new Uri("http://20.42.33.196/api");
+                    client.BaseAddress = new Uri("http://20.42.33.196/api/");
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response1 = new HttpResponseMessage();
                     response1 = client.GetAsync("Policy/GetEligibleClaimAmount?PolicyID=" + policyID + "&MemberID=" + memberID + "&BenefitID=" + benefitID).Result;
@@ -126,7 +126,7 @@ namespace ClaimsMicroservice.Repository
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                 using (HttpClient client = new HttpClient(clientHandler))
                 {
-                    client.BaseAddress = new Uri("http://20.42.33.196/api");
+                    client.BaseAddress = new Uri("http://20.42.33.196/api/");
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response2 = new HttpResponseMessage();
                     response2 = client.GetAsync("Policy/GetEligibleBenefits?PolicyID=" + policyID + "&MemberID=" + memberID).Result;

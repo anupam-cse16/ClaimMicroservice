@@ -70,7 +70,7 @@ namespace ClaimsMicroservice.Controllers
         /// <param name="claimAmt"></param>
         /// <param name="benefit"></param>
         /// <returns></returns>
-
+    
         //https://localhost:44387/api/Claims/submitClaim?policyID=1&memberID=1&benefitID=1&hospitalID=1&claimAmt=80000&benefit="MedicalCheckup"
         [HttpPost]
         [Route("submitClaim")]
